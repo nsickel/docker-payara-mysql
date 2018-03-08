@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 echo 'create-jdbc-connection-pool --datasourceclassname com.mysql.jdbc.jdbc2.optional.MysqlDataSource --restype javax.sql.DataSource --property User=$MYSQL_USER:Port=$MYSQL_PORT:Password=$MYSQL_PASSWORD:Url="jdbc\:mysql\://$MYSQL_HOST\:$MYSQL_PORT\/$MYSQL_DATABASE" mysql' >> $POSTBOOT_COMMANDS
-echo 'create-jdbc-resource --connectionpoolid mysql jdbc/example' >> $POSTBOOT_COMMANDS
+echo 'create-jdbc-resource --connectionpoolid mysql $JDBC_RESOURCE_NAME' >> $POSTBOOT_COMMANDS
